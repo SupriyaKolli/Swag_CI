@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "smoke": "tsc && cucumber-js --tags @smoke --require ./dist/step_definitions/ --format ./dist/support/reporter.js:.dummy.txt"
+    "smoke": "tsc && cucumber-js --tags @smoke --require ./dist/step_definitions/ --format ./dist/support/reporter.js:.dummy.txt",
+    "regression": "tsc && cucumber-js --tags @regression --require ./dist/step_definitions/ --format ./dist/support/reporter.js:.dummy.txt"
+
   },
   "keywords": [],
   "author": "",
