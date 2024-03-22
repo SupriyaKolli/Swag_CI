@@ -25,4 +25,4 @@ After(async function (scenario) {
         const decodedImage = Buffer.from(png, "base64");
         return attach(decodedImage, "image/png");
     }
-})
+});
