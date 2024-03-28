@@ -5,7 +5,8 @@ import { Options } from 'selenium-webdriver/chrome';
 export let driver: WebDriver;
 
 BeforeAll(function() {
-    this.setDefaultTimeout(10000);
+   // @ts-ignore
+   this.setDefaultTimeout(10000);
 });
 
 Before(async () => {
