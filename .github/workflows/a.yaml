@@ -15,4 +15,5 @@ jobs:
           node-version: '20.x'
       - run: npm ci
       - run: google-chrome --version
+      - run: chromedriver --version
       - run: npm run test
