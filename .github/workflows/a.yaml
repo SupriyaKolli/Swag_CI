@@ -8,6 +8,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Update Chrome
+        run: |
+          sudo apt update
+          sudo apt upgrade google-chrome-stable -y
+
+      - name: Download and install latest ChromeDriver
+        run: |
+          LATEST=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE")
+          wget "https://chromedriver.storage.googleapis.com/${LATEST}/chromedriver_linux64.zip"
+          unzip chromedriver_linux64.zip
+          sudo mv chromedriver /usr/local/bin/
+          sudo chmod +x /usr/local/bin/chromedriver
+
+      - name: Check Chrome and ChromeDriver versions
+        run: |
+          google-chrome --version
+          chromedriver --version
+          
       - uses: actions/checkout@v4
       - name: Use Node.js
         uses: actions/setup-node@v4
