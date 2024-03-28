@@ -25,6 +25,7 @@ Feature: Login and Add item to cart
 
 
   @regression
+  @smoke
   Scenario Outline: Add and Remove item from the cart
     Given User opens URL "<url>"
     And User enters email as "<email>" and password as "<password>"
