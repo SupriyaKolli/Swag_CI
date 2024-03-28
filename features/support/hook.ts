@@ -5,6 +5,8 @@ import { Options } from 'selenium-webdriver/chrome';
 export let driver: WebDriver;
 
 BeforeAll(async () => {
+    const chromeOptions = new Options();
+    chromeOptions.setChromeBinaryPath('C:\Program Files\Google\Chrome');
     driver = await new Builder()
         .forBrowser('chrome')
         .setChromeOptions(new Options()
