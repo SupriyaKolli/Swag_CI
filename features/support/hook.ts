@@ -1,10 +1,14 @@
-import { After, AfterAll, BeforeAll, Status } from '@cucumber/cucumber';
+import { After, AfterAll, BeforeAll, Before, Status } from '@cucumber/cucumber';
 import { Builder, WebDriver } from 'selenium-webdriver';
 import { Options } from 'selenium-webdriver/chrome';
 
 export let driver: WebDriver;
 
-BeforeAll(async () => {
+BeforeAll(function() {
+    this.setDefaultTimeout(10000);
+});
+
+Before(async () => {
     const chromeOptions = new Options();
     chromeOptions.setChromeBinaryPath('C:\Program Files\Google\Chrome');
     driver = await new Builder()
