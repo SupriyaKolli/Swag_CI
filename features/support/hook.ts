@@ -10,7 +10,7 @@ BeforeAll(async () => {
     driver = await new Builder()
         .forBrowser('chrome')
         .setChromeOptions(new Options()
-                          .headless()
+                          // .headless()
                           .windowSize({ width: 640, height: 480 }))
         .build();
     return driver.manage().window().maximize();
