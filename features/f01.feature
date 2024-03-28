@@ -2,7 +2,6 @@ Feature: Login and Add item to cart
 
   @smoke
   Scenario Outline: Add and purchase the item
-    @timeout=10000
     Given User opens URL "<url>"
     And User enters email as "<email>" and password as "<password>"
     And Click on Login button
