@@ -9,7 +9,7 @@ jobs:
 
     steps:   
 
-      - name: Check Chrome and ChromeDriver versions
+      - name: print Chrome and ChromeDriver versions
         run: |
           google-chrome --version
           chromedriver --version
